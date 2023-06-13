@@ -42,7 +42,32 @@ class calculator(tk.Tk):
             button.config(bg=bg)
             button.grid(row=row, column=column, padx=10, pady=10)
 
+        def add_number(self, number):
+            current = self.result.get()
+            current += str(number)
+            self.result.delete(0, tk.END)
+            self.result.insert(0, current)
+
+        def add_operation(self, operator):
+            current = self.result.get()
+            current += operator
+            self.result.delete(0, tk.END)
+            self.result.insert(0, current)
+
+        def calculate(self):
+            current = self.result.get()
+            self.result.delete(0, tk.END)
+            self.result.insert(0, eval(current))
+
+        def clear(self):
+            self.result.delete(0, tk.END)
+
+
+
+
         
+
+
 
 
 
