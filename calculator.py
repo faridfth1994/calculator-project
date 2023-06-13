@@ -1,11 +1,11 @@
 import tkinter as tk
 
 
-class calculator(tk.Tk):
+class Calculator(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Calculator")
-        self.geometry("480*620")
+        self.geometry("480x620")
         self.result = tk.Entry(self, font=("Arial", 36))
         self.result.grid(row=0, column=0, columnspan=4, padx=10,
                          pady=10, ipadx=40, ipady=20, sticky=tk.W+tk.E)
@@ -63,7 +63,9 @@ class calculator(tk.Tk):
             self.result.delete(0, tk.END)
 
 
-
+if __name__ == "__main__":
+    calculator = Calculator()
+    calculator.mainloop()
 
         
 
