@@ -33,8 +33,12 @@ class calculator(tk.Tk):
                            lambda: self.add_operation("*"))
         self.create_button("+", button_frame, 3, 3,
                            lambda: self.add_operation("/"))
+        self.create_button("=", button_frame, 3, 2, self.calculate, "green")
+        self.create_button("C", button_frame, 3, 0, self.clear)
+
         
-        
+
+
         
 
 
