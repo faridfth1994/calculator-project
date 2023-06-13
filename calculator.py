@@ -12,5 +12,9 @@ class calculator(tk.Tk):
         self.result.config(justify=tk.LEFT)
         self.grid_columnconfigure(0,weight=1)
 
+        button_frame = tk.Frame(self)
+        button_frame.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
+
         
+
         
