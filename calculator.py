@@ -36,31 +36,31 @@ class Calculator(tk.Tk):
         self.create_button("=", button_frame, 3, 2, self.calculate, "green")
         self.create_button("C", button_frame, 3, 0, self.clear)
 
-        def create_button(self, text, frame, row, column, command, bg="white"):
-            button = tk.Button(frame, text=text, command=command,
-                               font=("Arial",18), width=5, height=3)
-            button.config(bg=bg)
-            button.grid(row=row, column=column, padx=10, pady=10)
+    def create_button(self, text, frame, row, column, command, bg="white"):
+         button = tk.Button(frame, text=text, command=command,
+                           font=("Arial",18), width=5, height=3)
+         button.config(bg=bg)
+         button.grid(row=row, column=column, padx=10, pady=10)
 
-        def add_number(self, number):
-            current = self.result.get()
-            current += str(number)
-            self.result.delete(0, tk.END)
-            self.result.insert(0, current)
+    def add_number(self, number):
+        current = self.result.get()
+        current += str(number)
+        self.result.delete(0, tk.END)
+        self.result.insert(0, current)
 
-        def add_operation(self, operator):
-            current = self.result.get()
-            current += operator
-            self.result.delete(0, tk.END)
-            self.result.insert(0, current)
+    def add_operation(self, operator):
+        current = self.result.get()
+        current += operator
+        self.result.delete(0, tk.END)
+        self.result.insert(0, current)
 
-        def calculate(self):
-            current = self.result.get()
-            self.result.delete(0, tk.END)
-            self.result.insert(0, eval(current))
+    def calculate(self):
+        current = self.result.get()
+        self.result.delete(0, tk.END)
+        self.result.insert(0, eval(current))
 
-        def clear(self):
-            self.result.delete(0, tk.END)
+    def clear(self):
+        self.result.delete(0, tk.END)
 
 
 if __name__ == "__main__":
