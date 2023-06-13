@@ -36,10 +36,15 @@ class calculator(tk.Tk):
         self.create_button("=", button_frame, 3, 2, self.calculate, "green")
         self.create_button("C", button_frame, 3, 0, self.clear)
 
+        def create_button(self, text, frame, row, column, command, bg="white"):
+            button = tk.Button(frame, text=text, command=command,
+                               font=("Arial",18), width=5, height=3)
+            button.config(bg=bg)
+            button.grid(row=row, column=column, padx=10, pady=10)
+
         
 
 
-        
 
 
 
